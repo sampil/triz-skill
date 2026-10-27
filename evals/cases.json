@@ -1,0 +1,39 @@
+{
+  "about": "Test prompts for the triz skill. Run each prompt with and without the skill, then compare blind. 'should_trigger' false cases check the gate: the skill must not turn ordinary tasks into TRIZ exercises.",
+  "criteria": [
+    "Ideas are concrete: they name actual components, steps, data or actors of the user's system",
+    "At least one idea resolves the conflict rather than compromising between the two sides",
+    "Ideas use resources already present before adding new parts",
+    "Risks and a cheap next experiment are given",
+    "No framework theater: TRIZ terms appear only when the user asked for TRIZ, and never replace mechanisms",
+    "Matrix principles, when cited, match scripts/matrix.py output"
+  ],
+  "cases": [
+    {"id": "drone-battery", "should_trigger": true,
+     "prompt": "Our delivery drone needs 40% longer flights, but every extra battery cell adds weight that cancels the gain. What can we do?"},
+    {"id": "ci-speed", "should_trigger": true,
+     "prompt": "Our CI suite takes 40 minutes and protects compliance coverage. Developers need useful feedback within 5 minutes. Cutting tests is not allowed."},
+    {"id": "signup-fields", "should_trigger": true,
+     "prompt": "Sales wants company size, role and use case at signup. Growth says each extra field costs conversion. Find something better than a compromise."},
+    {"id": "auth-friction", "should_trigger": true,
+     "prompt": "Use TRIZ: we need stronger authentication in a banking app, but users hate extra login steps."},
+    {"id": "free-tier", "should_trigger": true,
+     "prompt": "Our free plan is so good that almost nobody upgrades. If we cut it, signups drop. How do we get out of this?"},
+    {"id": "soggy-fries", "should_trigger": true,
+     "prompt": "Fries arrive soggy in delivery. If we vent the box, they arrive cold."},
+    {"id": "model-cost", "should_trigger": true,
+     "prompt": "The large model is 8 points more accurate but 12x more expensive per request. We can't afford it for all traffic."},
+    {"id": "ru-meetings", "should_trigger": true,
+     "prompt": "Инженеры жалуются на созвоны, но когда мы их отменяем, команды перестают понимать, что делают соседи. Помоги через ТРИЗ."},
+    {"id": "forecast", "should_trigger": true,
+     "prompt": "Where are e-bike locks heading over the next 5 years? Use TRIZ evolution trends."},
+    {"id": "ariz-deep", "should_trigger": true,
+     "prompt": "Walk me through ARIZ for this: a pipe elbow in a pneumatic conveyor wears through in weeks because abrasive particles hit the bend."},
+    {"id": "bug", "should_trigger": false,
+     "prompt": "This handler panics when the optional 'email' field is missing. Fix it and add a test."},
+    {"id": "comparison", "should_trigger": false,
+     "prompt": "Postgres or MySQL for a small internal CRUD app?"},
+    {"id": "taste", "should_trigger": false,
+     "prompt": "Write three taglines for a neighborhood coffee shop."}
+  ]
+}
